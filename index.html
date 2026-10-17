@@ -87,6 +87,14 @@ h1 span + span { color: var(--hero-accent); }
 .group li:last-child { border-bottom: 0; }
 .llm { margin-top: 30px; }
 .llm h3 { font-size: 1.05rem; margin-bottom: 10px; }
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.proj { border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 6px; background: var(--surface); padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.proj .tag { font-family: var(--font-mono); font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0; }
+.proj h3 { font-size: 1.2rem; }
+.proj p { margin: 0; }
+.proj .links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: auto; padding-top: 6px; font-family: var(--font-mono); font-size: .85rem; }
+.proj-note { color: var(--muted); font-size: .9rem; margin: 18px 0 0; }
+@media (max-width: 700px) { .projects { grid-template-columns: minmax(0, 1fr); } }
 .plain li { padding: 7px 0 7px 22px; position: relative; border-bottom: 1px dashed var(--line); }
 .plain li::before { content: ""; position: absolute; left: 2px; top: 1.05em; width: 8px; height: 2px; background: var(--accent); }
 .plain li:last-child { border-bottom: 0; }
@@ -124,6 +132,7 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 40px; font-famil
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#ai-work">AI work</a>
+        <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
@@ -187,6 +196,39 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 40px; font-famil
         <p class="toolhead">AI and LLM skills</p>
         <ul class="chips accent"><li>Prompt Engineering</li><li>LLM Optimization</li><li>Generative AI Quality Analysis</li><li>AI Data Quality Assurance</li><li>ML Data Annotation</li><li>Response Ranking and Judgment</li><li>Search Engine Evaluation</li><li>Information Retrieval Analysis</li><li>Digital Advertisement Quality</li><li>Linguistic Data and Localization</li></ul>
       </div>
+    </div>
+  </section>
+
+  <section class="sec" id="projects" aria-labelledby="h-proj">
+    <h2 id="h-proj">Sample projects</h2>
+    <div>
+      <div class="projects">
+        <article class="proj">
+          <p class="tag">Networking tool</p>
+          <h3>VLSM Planner</h3>
+          <p>Split one IPv4 network into right-sized subnets. Enter a parent block and the hosts each department needs.</p>
+          <p class="links"><a href="https://ajjuahmad.github.io/vlsm-planner/">Open demo</a><a href="https://github.com/ajjuahmad/vlsm-planner" target="_blank" rel="noopener">Source</a></p>
+        </article>
+        <article class="proj">
+          <p class="tag">Networking simulator</p>
+          <h3>Packet Trail</h3>
+          <p>Watch a ping travel hop by hop and see how TTL makes traceroute work.</p>
+          <p class="links"><a href="https://ajjuahmad.github.io/packet-trail/">Open demo</a><a href="https://github.com/ajjuahmad/packet-trail" target="_blank" rel="noopener">Source</a></p>
+        </article>
+        <article class="proj">
+          <p class="tag">QA game</p>
+          <h3>Bug Hunt</h3>
+          <p>Read the test log and click every row where the actual result does not match the expected one, before time runs out.</p>
+          <p class="links"><a href="https://ajjuahmad.github.io/bug-hunt/">Play</a><a href="https://github.com/ajjuahmad/bug-hunt" target="_blank" rel="noopener">Source</a></p>
+        </article>
+        <article class="proj">
+          <p class="tag">Networking game</p>
+          <h3>Port Match</h3>
+          <p>A memory game: match each network protocol with its default port number.</p>
+          <p class="links"><a href="https://ajjuahmad.github.io/port-match/">Play</a><a href="https://github.com/ajjuahmad/port-match" target="_blank" rel="noopener">Source</a></p>
+        </article>
+      </div>
+      <p class="proj-note">Small browser projects that run without installing anything. Built with AI assistance.</p>
     </div>
   </section>
 
