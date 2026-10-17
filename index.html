@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejaz Ahemad | Quality Analyst and AI Data Evaluator</title>
+<meta name="description" content="Ejaz Ahemad is a Quality Analyst with 14 years in software QA, now working remotely on AI data, LLM response evaluation and search quality rating. Based in Malegaon, Maharashtra.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: dark hero with a drifting network graph behind the name and facts, then labelled sections (narrow label column, wide content column). */
+:root {
+  --bg: #F2F5F3; --surface: #E7EDEA; --ink: #13201B; --muted: #4F625A; --line: #C6D3CC;
+  --accent: #1D6B58; --accent-soft: #D3E8E0; --on-accent: #F2F5F3; --flag: #C2410C;
+  --hero-bg: #0B1512; --hero-ink: #E8F1ED; --hero-muted: #9DB5AB; --hero-accent: #5CC3A4; --hero-line: rgba(92,195,164,.28);
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1613; --surface: #16211D; --ink: #E4EDE9; --muted: #9BB0A7; --line: #2A3A34;
+    --accent: #5CC3A4; --accent-soft: #17332B; --on-accent: #0E1613; --flag: #F08A57; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1613; --surface: #16211D; --ink: #E4EDE9; --muted: #9BB0A7; --line: #2A3A34;
+  --accent: #5CC3A4; --accent-soft: #17332B; --on-accent: #0E1613; --flag: #F08A57; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.pad { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1080px; margin: 0 auto; }
+.mono { font-family: var(--font-mono); }
+
+/* hero */
+.hero { position: relative; background: var(--hero-bg); color: var(--hero-ink); overflow: hidden; }
+.hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,21,18,.92) 0%, rgba(11,21,18,.6) 55%, rgba(11,21,18,.25) 100%); pointer-events: none; }
+.hero-inner { position: relative; z-index: 1; padding-block: 18px 56px; }
+.nav { display: flex; flex-wrap: wrap; gap: 10px 28px; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid var(--hero-line); }
+.mark { font-family: var(--font-display); font-stretch: 125%; font-weight: 800; letter-spacing: .02em; }
+.nav nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.nav nav a { font-family: var(--font-mono); font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--hero-muted); text-decoration: none; }
+.nav nav a:hover { color: var(--hero-accent); }
+.hero-body { padding-top: 64px; max-width: 760px; }
+.kicker { font-size: .82rem; text-transform: uppercase; letter-spacing: .1em; color: var(--hero-accent); margin: 0 0 18px; }
+h1 { font-family: var(--font-display); font-stretch: 125%; font-weight: 850; font-size: clamp(2.6rem, 10.5vw, 6.2rem); line-height: .92; letter-spacing: -.02em; margin: 0 0 24px; text-transform: uppercase; }
+h1 span { display: block; }
+h1 span + span { color: var(--hero-accent); }
+.lead { font-size: 1.15rem; max-width: 33em; margin: 0 0 26px; color: var(--hero-ink); }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 560px; margin: 0 0 30px; padding: 0; list-style: none; }
+.stats li { border-top: 2px solid var(--hero-accent); padding-top: 10px; }
+.stats b { display: block; font-family: var(--font-display); font-stretch: 112%; font-weight: 800; font-size: 2rem; line-height: 1.05; }
+.stats span { font-family: var(--font-mono); font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; color: var(--hero-muted); }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { font: 500 .95rem var(--font-body); padding: 11px 18px; border-radius: 4px; border: 1.5px solid var(--accent); background: var(--accent); color: var(--on-accent); cursor: pointer; text-decoration: none; display: inline-flex; gap: 8px; align-items: center; }
+.btn.ghost { background: transparent; color: var(--accent); }
+.hero .btn { background: var(--hero-accent); border-color: var(--hero-accent); color: #0B1512; }
+.hero .btn.ghost { background: transparent; color: var(--hero-ink); border-color: var(--hero-muted); }
+.btn:hover { filter: brightness(1.1); }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 28px 0 0; font-family: var(--font-mono); font-size: .8rem; color: var(--hero-muted); }
+.facts .status { display: inline-flex; align-items: center; gap: 8px; color: var(--hero-ink); }
+.facts .status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #F08A57; box-shadow: 0 0 0 4px rgba(240,138,87,.22); }
+
+/* sections */
+.sec { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 20px 48px; padding-block: 44px; border-top: 1px solid var(--line); }
+.sec:first-of-type { border-top: 0; }
+.sec > h2 { margin: 0; font-family: var(--font-mono); font-weight: 500; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding-top: 6px; }
+.sec h3 { font-family: var(--font-display); font-stretch: 105%; font-weight: 700; font-size: 1.35rem; line-height: 1.25; margin: 0; }
+.about { font-size: 1.12rem; max-width: 40em; margin: 0; }
+.entry { display: grid; grid-template-columns: minmax(0, 10.5rem) minmax(0, 1fr); gap: 8px 32px; padding-block: 22px; border-bottom: 1px dashed var(--line); }
+.entry:first-child { padding-top: 0; }
+.entry .when { font-family: var(--font-mono); font-size: .85rem; color: var(--muted); padding-top: 5px; }
+.entry .org { margin: 4px 0 0; color: var(--muted); }
+.toolhead { margin: 26px 0 12px; font-family: var(--font-mono); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.chips li { font-family: var(--font-mono); font-size: .85rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); }
+.chips.accent li { background: var(--accent-soft); border-color: transparent; }
+.groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.group { border-top: 3px solid var(--accent); padding-top: 14px; min-width: 0; }
+.group h3 { font-size: 1.05rem; margin-bottom: 12px; }
+.group ul, .plain { margin: 0; padding: 0; list-style: none; }
+.group li { padding: 9px 0; border-bottom: 1px dashed var(--line); }
+.group li:last-child { border-bottom: 0; }
+.llm { margin-top: 30px; }
+.llm h3 { font-size: 1.05rem; margin-bottom: 10px; }
+.plain li { padding: 7px 0 7px 22px; position: relative; border-bottom: 1px dashed var(--line); }
+.plain li::before { content: ""; position: absolute; left: 2px; top: 1.05em; width: 8px; height: 2px; background: var(--accent); }
+.plain li:last-child { border-bottom: 0; }
+.edu-meta { color: var(--muted); margin: 4px 0 22px; }
+.edu-meta strong { color: var(--ink); font-weight: 600; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.two h3 { font-size: 1.05rem; margin-bottom: 14px; }
+.award { margin: 28px 0 0; padding: 18px 20px; border: 1px solid var(--line); background: var(--surface); border-radius: 6px; }
+.award .when { font-family: var(--font-mono); font-size: .8rem; color: var(--muted); margin: 0 0 6px; }
+.award p { margin: 0; }
+.langs { display: grid; gap: 14px; }
+.langs p { margin: 0 0 8px; font-family: var(--font-mono); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.contact-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 0 0 18px; }
+.email-text { font-family: var(--font-mono); font-size: .9rem; color: var(--muted); overflow-wrap: anywhere; }
+.contact-note { color: var(--muted); margin: 0; }
+footer { border-top: 1px solid var(--line); padding-block: 18px 40px; font-family: var(--font-mono); font-size: .78rem; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+@media (max-width: 860px) {
+  .hero-body { padding-top: 44px; }
+  .hero::after { background: linear-gradient(180deg, rgba(11,21,18,.9) 0%, rgba(11,21,18,.7) 100%); }
+  .sec { grid-template-columns: minmax(0, 1fr); padding-block: 34px; gap: 14px; }
+  .groups { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .two { grid-template-columns: minmax(0, 1fr); }
+  .entry { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .entry .when { padding-top: 0; }
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="hero-inner pad"><div class="wrap">
+    <div class="nav">
+      <span class="mark">EJAZ AHEMAD</span>
+      <nav aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#ai-work">AI work</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <p class="kicker mono">Quality Analyst · AI Data &amp; Search Evaluator</p>
+      <h1><span>Ejaz</span><span>Ahemad</span></h1>
+      <p class="lead">I work with teams to find and fix their most critical problems, with a focus on efficiency and measurable return. Fourteen years in software quality assurance, now evaluating AI models and search results.</p>
+      <ul class="stats">
+        <li><b>14</b><span>Years in QA</span></li>
+        <li><b>10</b><span>AI work areas</span></li>
+        <li><b>6</b><span>Languages</span></li>
+      </ul>
+      <div class="cta">
+        <a class="btn" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="Ejaz_Ahemad_Resume.pdf">Download CV</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/ajaz-ahmad-a00805425/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="facts"><span class="status">Open to remote work</span><span>Malegaon, Maharashtra</span><span>B.E. Computer Engineering</span></p>
+    </div>
+  </div></div>
+</header>
+
+<main class="pad"><div class="wrap">
+  <section class="sec" id="about" aria-labelledby="h-about">
+    <h2 id="h-about">Objective</h2>
+    <p class="about">I collaborate with innovative teams to diagnose and solve their most critical challenges, ensuring maximum efficiency and tangible ROI. I thrive where my specialized knowledge and deep experience in Computer Science and search engine optimization can be fully used to build a shared, enriched knowledge base and deliver best-in-class solutions.</p>
+  </section>
+
+  <section class="sec" id="experience" aria-labelledby="h-exp">
+    <h2 id="h-exp">Experience</h2>
+    <div>
+      <div>
+        <article class="entry"><div class="when">Dec 2014 – Jan 2020</div><div><h3>Senior Quality Analyst</h3><p class="org">Ambab Infotech Pvt. Ltd.</p></div></article>
+        <article class="entry"><div class="when">Mar 2006 – Sep 2014</div><div><h3>Quality Analyst</h3><p class="org">Ambab Infotech Pvt. Ltd.</p></div></article>
+      </div>
+      <p class="toolhead">Fourteen years at Ambab Infotech, working across</p>
+      <ul class="chips accent"><li>QA / Testing Tools</li><li>Performance Testing</li><li>Installation</li><li>Redmine</li><li>Mantis</li><li>Selenium</li></ul>
+    </div>
+  </section>
+
+  <section class="sec" id="ai-work" aria-labelledby="h-ai">
+    <h2 id="h-ai">Freelance AI work</h2>
+    <div>
+      <div class="groups">
+        <div class="group"><h3>AI models and data</h3><ul><li>Data Annotation Specialist</li><li>AI Prompt Liaison / Feedback Engineer</li><li>AI Model Trainer</li><li>AI Content Reviewer / Evaluator</li><li>AI Data Validation</li></ul></div>
+        <div class="group"><h3>Search quality</h3><ul><li>Search Relevance</li><li>Search Engine Evaluations</li><li>Search Ads Evaluations</li></ul></div>
+        <div class="group"><h3>Language and media</h3><ul><li>Text and Speech Transcription / Translation</li><li>Dubbing, Lip syncing</li></ul></div>
+      </div>
+      <div class="llm">
+        <h3>AI and LLM work</h3>
+        <ul class="plain">
+          <li>Compare and rank AI model responses against written guidelines, judging accuracy, relevance, tone and instruction-following, with clear written reasoning for each decision.</li>
+          <li>Write and refine prompts, including difficult and edge-case prompts, to test how consistently a model follows instructions.</li>
+          <li>Review generative AI output for quality and flag hallucinations, unsupported claims and policy violations.</li>
+          <li>Label, annotate and validate training data, and check annotated datasets for inconsistencies.</li>
+          <li>Rate search results and search ads for relevance and quality against published guidelines.</li>
+          <li>Transcribe, translate and quality-check text and speech, and review dubbing and lip-sync output.</li>
+        </ul>
+        <p class="toolhead">AI and LLM skills</p>
+        <ul class="chips accent"><li>Prompt Engineering</li><li>LLM Optimization</li><li>Generative AI Quality Analysis</li><li>AI Data Quality Assurance</li><li>ML Data Annotation</li><li>Response Ranking and Judgment</li><li>Search Engine Evaluation</li><li>Information Retrieval Analysis</li><li>Digital Advertisement Quality</li><li>Linguistic Data and Localization</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="education" aria-labelledby="h-edu">
+    <h2 id="h-edu">Education</h2>
+    <div>
+      <h3>Bachelor of Engineering, Computer Engineering</h3>
+      <p class="edu-meta">Rizvi College of Engineering, Bandra West, Mumbai · University of Mumbai · <strong>Aug 2002 – May 2006</strong> · Second Class</p>
+      <p class="toolhead" style="margin-top:0">Database and Oracle track</p>
+      <ul class="chips"><li>Oracle ERP</li><li>Oracle Developer OCM</li><li>Oracle DBA</li><li>Database Management</li><li>MySQL / MS SQL Expert</li></ul>
+    </div>
+  </section>
+
+  <section class="sec" id="skills" aria-labelledby="h-skills">
+    <h2 id="h-skills">Skills</h2>
+    <div>
+      <div class="two">
+        <div><h3>Key skills</h3><ul class="plain"><li>Communication</li><li>Leadership</li><li>Team Management</li><li>Project Management</li><li>Planning and Budget Planning</li><li>Marketing and Social Media</li></ul></div>
+        <div><h3>GIS and mapping</h3><ul class="plain"><li>Analyzing data with mapping software</li><li>Finding patterns and trends through spatial mapping</li><li>Designing digital maps from geographic data</li><li>Creating shapefiles that layer external data over topographical maps</li><li>Converting physical maps to digital form</li><li>Data munging and cleaning</li></ul></div>
+      </div>
+      <div class="langs" style="margin-top:30px">
+        <div><p>Native</p><ul class="chips"><li>English</li><li>Hindi</li><li>Marathi</li><li>Urdu</li></ul></div>
+        <div><p>Professional</p><ul class="chips"><li>Tamil</li><li>Gujarati</li></ul></div>
+      </div>
+      <div class="award"><p class="when">15 Feb 2016 · Hotel Rang Sharda</p><p>Presented at an international enterprise event on Enterprise Resource Planning and Automation Quality AI, and was awarded for the presentation.</p></div>
+    </div>
+  </section>
+
+  <section class="sec" id="contact" aria-labelledby="h-contact">
+    <h2 id="h-contact">Contact</h2>
+    <div>
+      <h3 style="margin-bottom:16px">Available for remote work only</h3>
+      <div class="contact-row">
+        <span class="email-text" id="email">ajjuahmad4321@gmail.com</span>
+        <button class="btn" id="copy-email" type="button">Copy email</button>
+        <a class="btn ghost" href="mailto:ajjuahmad4321@gmail.com">Send email</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/ajaz-ahmad-a00805425/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="contact-note">Based in Malegaon, Maharashtra, India.</p>
+    </div>
+  </section>
+
+  <footer><span>Ejaz Ahemad · B.E. Computer Engineering</span><span>Malegaon, Maharashtra · Remote work only</span></footer>
+</div></main>
+
+<script>
+(function () {
+  var email = "ajjuahmad4321@gmail.com";
+  var btn = document.getElementById("copy-email");
+  btn.addEventListener("click", function () {
+    var label = "Copy email";
+    function done(t) { btn.textContent = t; setTimeout(function () { btn.textContent = label; }, 1800); }
+    function pick() {
+      var n = document.getElementById("email"), r = document.createRange();
+      r.selectNodeContents(n); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      done("Press Ctrl/Cmd+C");
+    }
+    try { navigator.clipboard.writeText(email).then(function () { done("Email copied"); }, pick); } catch (e) { pick(); }
+  });
+
+  var c = document.getElementById("net"), ctx = c.getContext("2d");
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var nodes = [], W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2), raf = 0;
+  function size() {
+    var r = c.getBoundingClientRect(); W = r.width; H = r.height;
+    c.width = W * dpr; c.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var n = Math.max(26, Math.min(70, Math.round(W * H / 14000)));
+    nodes = [];
+    for (var i = 0; i < n; i++) nodes.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .25, vy: (Math.random() - .5) * .25, r: 1.4 + Math.random() * 1.8 });
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    var link = 150;
+    for (var i = 0; i < nodes.length; i++) {
+      var a = nodes[i];
+      for (var j = i + 1; j < nodes.length; j++) {
+        var b = nodes[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.sqrt(dx * dx + dy * dy);
+        if (d < link) { ctx.strokeStyle = "rgba(92,195,164," + (0.34 * (1 - d / link)).toFixed(3) + ")"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+      }
+    }
+    for (var k = 0; k < nodes.length; k++) { var p = nodes[k]; ctx.fillStyle = "rgba(92,195,164,.85)"; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.fill(); }
+  }
+  function step() {
+    for (var i = 0; i < nodes.length; i++) {
+      var p = nodes[i]; p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1;
+    }
+    draw(); raf = requestAnimationFrame(step);
+  }
+  size(); draw();
+  if (!reduce) raf = requestAnimationFrame(step);
+  var t; window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(function () { size(); draw(); }, 150); });
+  document.addEventListener("visibilitychange", function () { if (reduce) return; if (document.hidden) cancelAnimationFrame(raf); else raf = requestAnimationFrame(step); });
+})();
+</script>
+</body>
+</html>
